@@ -621,3 +621,13 @@ a {
   flex-direction: column;
   gap:2.5vh;
 }
+.home_nav a {
+  text-decoration: none;
+ 
+ 
+  color: #FFF;
+  font-family: Sarabun;
+  font-size: 22px;
+ 
+
+}

@@ -8,8 +8,10 @@ function plus_btn() {
     arr = ["Air Frieght","Sea Frieght","Road Frieght","Event Logistics","Insurance Service","Oversizeshipment & Project","Customs Clearance","Warehousing & Distribution","Special equipment","Food Storage"]
     
     arr.forEach((s)=> {
+        const a = document.createElement("a")
         const li = document.createElement("li")
-        li.innerHTML = s
+        a.innerHTML = s
+        li.appendChild(a)
         li.id = 'new'
         li.classList.add("new")
         solns_btn.parentNode.insertBefore(li, solns_btn.nextSibling);
