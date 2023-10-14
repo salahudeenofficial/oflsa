@@ -4,15 +4,46 @@ const cross = document.querySelector(".cross")
 const res_nav = document.querySelector(".res_nav")
 const home_nav2 = document.querySelector(".home_nav2")
 const solns_btn = document.querySelector(".solns_btn")
+// let hv = document.querySelectorAll(".hv")
+// hv = [...hv]
+// hv.forEach((el => {
+//     el.addEventListener("mouseover",()=> {
+//         el.style.backgroundImage  = "#FFF"
+//         el.style.color = "#FFF"
+//         el.style.opacity = ".5" 
+     
+//      })
+
+// }))
+
+
+function scrollFunction(id) {
+    let e = document.getElementById(id);
+    console.log(e)
+    // This ends the block to the window 
+    // bottom and also aligns the view to the center 
+    e.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+      inline: 'center'
+    });
+  }
+  
+  
+
+
 function plus_btn() {
     arr = ["Air Frieght","Sea Frieght","Road Frieght","Event Logistics","Insurance Service","Oversizeshipment & Project","Customs Clearance","Warehousing & Distribution","Special equipment","Food Storage"]
+
+    arrid = ['zmbox0','zmbox1','zmbox1','zmbox2','zmbox3','zmbox4','zmbox3','zmbox4','zmbox5','zmbox5']
     
-    arr.forEach((s)=> {
-        const a = document.createElement("a")
+// cursor pointer aakkanam --salah:)
+
+    arr.forEach((s,index)=> {
         const li = document.createElement("li")
-        a.innerHTML = s
-        li.appendChild(a)
-        li.id = 'new'
+        li.innerHTML = s
+        const id = arrid[index] 
+        li.addEventListener('click',() => {scrollFunction(id)} )
         li.classList.add("new")
         solns_btn.parentNode.insertBefore(li, solns_btn.nextSibling);
 
@@ -65,7 +96,7 @@ function exit_nav() {
 
 function show_nav() {
    let in_div = document.querySelector(".in_div")
-   in_div.style.width ="75vw" 
+   in_div.style.width ="50vw" 
    const w_nav = document.querySelector(".w_nav")
    console.log("m")
    w_nav.style.display = "block"
